@@ -1,0 +1,150 @@
+<div><div id="activity-167363" data-type="activity_article" class="program-full__block inprogramm__activity inprogramm__activity_article"><div id="activity-container-167363" data-id="167363" class="program-full__block-content"><!----> <div class="program-full__block-main"><div class=""><div class="inprogramm__activity-content"><!----> <!----> <!----> <!----> <div class="activity activity-article"><div class="programs-article__img-wrap"><img src="https://cs.sberbank-school.ru/inline?access_token=eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzA3NTg3NTMsImlhdCI6MTYzMDY3MjM1MywiZmlsZV91dWlkIjoiODU4YzQzNTAtNDdlZi0xMWVhLThhODMtMDA1MDU2MDExYjY4In0.R_BhtoUtgRE4UOlVVKFw6fKT9s0w8cJ64-75AgxJvIY" title="Основы Python" alt="Основы Python"></div> <p class="programs-article__text text-default-content" style="display: none;"></p></div> <!----></div> <!----></div> <!----> </div></div></div><div id="activity-167364" data-type="activity_article" class="program-full__block inprogramm__activity inprogramm__activity_article"><div id="activity-container-167364" data-id="167364" class="program-full__block-content"><!----> <div class="program-full__block-main"><div class="inprogramm__activity-inner"><div class="inprogramm__activity-content"><!----> <h3 class="hyphenate heading">
+	Описание
+</h3> <!----> <!----> <!----> <!----></div> <!----></div> <!----> <div id="block-270520" class="program-content-block cb_text"><div><!----> <div class="program-content-block__text text-default-content"><p>Строки это упорядоченные последовательности символов, для работы с текстовой информацией. Чтобы присвоить переменной строковое значение, достаточно приравнять выражение в кавычках.</p>
+<pre class="language-python"><code class="hljs">s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'ain"t it fun?'</span></span></span>
+s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">"ain't it fun?"</span></span></span></code></pre>
+<p>Как говорилось ранее, разницы между одинарными и двойными кавычками нет, они были введены для того, чтобы можно было не экранировать кавычки внутри предложения, как показано на примере выше. То есть, если бы мы в первом варианте с одинарными кавычками в слове <strong>ant"t</strong> применили также одинарную кавычку, тогда бы мы получили сообщение об ошибке, потому что наша строка состояла бы только из символов <strong>'ain'</strong>, остальной текст не был бы воспринят как часть строки, и в конце стояла бы одинокая открывающая кавычка. Но и этого можно избежать применив экранирование, или другими словами - отмену действия прямого назначения символа:</p>
+<pre class="language-python"><code class="hljs">s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'ain\'t it fun?'</span></span></span></code></pre>
+<p>В данном случае символ <strong>\</strong> отменяет действие кавычки, то есть она не закрывает строку, а воспринимается как часть выражения и заканчивается оно в самом конце, однако не всегда такой вид удобочитаем.</p>
+<p>Существуют различные экранированные последовательности, которые позволяют вставить символы, которые трудно ввести с клавиатуры, приведем пример одной из таких последовательностей:</p>
+<ul>
+<li><strong>\n</strong> - перевод строки</li>
+</ul>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'ain"t \nit \nfun?'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>print(s)
+ain<span class="hljs-string"><span class="hljs-string"><span class="hljs-string">"t
+it
+fun?</span></span></span></code></pre></div></div></div></div></div></div><div id="activity-167365" data-type="activity_article" class="program-full__block inprogramm__activity inprogramm__activity_article"><div id="activity-container-167365" data-id="167365" class="program-full__block-content"><!----> <div class="program-full__block-main"><div class="inprogramm__activity-inner"><div class="inprogramm__activity-content"><!----> <h3 class="hyphenate heading">
+	Операции со строками
+</h3> <!----> <!----> <!----> <!----></div> <!----></div> <!----> <div id="block-270521" class="program-content-block cb_text"><div><!----> <div class="program-content-block__text text-default-content"><p>Строки можно складывать:</p>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s_1 = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'Python'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s_2 = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">' '</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s_3 = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'is awesome!'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>print(s_1 + s_2 + s_3)
+<span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'Python is awesome!'</span></span></span></code></pre>
+<p>Или дублировать:</p>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>print(<span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'spam'</span></span></span> * <span class="hljs-number"><span class="hljs-number"><span class="hljs-number">3</span></span></span>)
+spamspamspam</code></pre>
+<p>С помощью метода <strong>len()</strong> можно узнать количество символов в строке:</p>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>len(<span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'Python'</span></span></span>)
+<span class="hljs-number"><span class="hljs-number"><span class="hljs-number">6</span></span></span></code></pre>
+<p>Можно обращаться к элементам по их индексу <strong>(индексация ведется от нуля)</strong>:</p>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'Python'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>print(s[<span class="hljs-number"><span class="hljs-number"><span class="hljs-number">0</span></span></span>])
+P
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>print(s[<span class="hljs-number"><span class="hljs-number"><span class="hljs-number">5</span></span></span>])
+n</code></pre>
+<p>По индексу можно извлекать несколько символов, тогда это будет называться <strong>срез</strong>:</p>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'Python'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>print(s[<span class="hljs-number"><span class="hljs-number"><span class="hljs-number">1</span></span></span>:<span class="hljs-number"><span class="hljs-number"><span class="hljs-number">2</span></span></span>])
+y
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>print(s[<span class="hljs-number"><span class="hljs-number"><span class="hljs-number">0</span></span></span>:])
+Python
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>print(s[:<span class="hljs-number"><span class="hljs-number"><span class="hljs-number">3</span></span></span>])
+Pyt
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>print(s[:])
+Python</code></pre>
+<p>Методов работы со строками довольно много, мы рассмотрим часть наиболее популярных:</p>
+<ul>
+<li><strong>find(str, [start],[end])</strong> - Поиск подстроки в строке. Возвращает номер первого вхождения или -1</li>
+</ul>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'PythonohtyP'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s.find(<span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'t'</span></span></span>)
+<span class="hljs-number"><span class="hljs-number"><span class="hljs-number">2</span></span></span></code></pre>
+<ul>
+<li><strong>rfind(str, [start],[end]) </strong>- Поиск подстроки в строке. Возвращает номер последнего вхождения или -1</li>
+</ul>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'PythonohtyP'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s.rfind(<span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'t'</span></span></span>)
+<span class="hljs-number"><span class="hljs-number"><span class="hljs-number">8</span></span></span></code></pre>
+<ul>
+<li><strong>index(str, [start],[end])</strong> - Поиск подстроки в строке. Возвращает номер первого вхождения или вызывает <strong>ValueError</strong></li>
+</ul>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'Python'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s.index(<span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'t'</span></span></span>)
+<span class="hljs-number"><span class="hljs-number"><span class="hljs-number">2</span></span></span></code></pre>
+<ul>
+<li><strong>rindex(str, [start],[end])</strong> - Поиск подстроки в строке. Возвращает номер последнего вхождения или вызывает <strong>ValueError</strong></li>
+</ul>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'PythonohtyP'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s.rindex(<span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'t'</span></span></span>)
+<span class="hljs-number"><span class="hljs-number"><span class="hljs-number">8</span></span></span></code></pre>
+<ul>
+<li><strong>replace(шаблон, замена)</strong> - Замена шаблона</li>
+</ul>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'Python'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s.replace(<span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'P'</span></span></span>, <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'AAA'</span></span></span>)
+<span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'AAAython'</span></span></span></code></pre>
+<ul>
+<li><strong>split(символ)</strong> - Разбиение строки по разделителю</li>
+</ul>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'Python'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s.split(<span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'t'</span></span></span>)
+[<span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'Py'</span></span></span>, <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'hon'</span></span></span>]</code></pre>
+<ul>
+<li><strong>isdigit() </strong>- Состоит ли строка из цифр</li>
+</ul>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'Python'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s.isdigit()
+<span class="hljs-literal"><span class="hljs-literal"><span class="hljs-literal">False</span></span></span></code></pre>
+<ul>
+<li><strong>isalpha()</strong> - Состоит ли строка из букв</li>
+</ul>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'Python'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s.isalpha()
+<span class="hljs-literal"><span class="hljs-literal"><span class="hljs-literal">True</span></span></span></code></pre>
+<ul>
+<li><strong>isalnum()</strong> - Состоит ли строка из цифр или букв</li>
+</ul>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'Python'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s.isalnum()
+<span class="hljs-literal"><span class="hljs-literal"><span class="hljs-literal">True</span></span></span></code></pre>
+<ul>
+<li><strong>islower()</strong> - Состоит ли строка из символов в нижнем регистре</li>
+</ul>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'Python'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s.islower()
+<span class="hljs-literal"><span class="hljs-literal"><span class="hljs-literal">False</span></span></span></code></pre>
+<ul>
+<li><strong>isupper()</strong> - Состоит ли строка из символов в верхнем регистре</li>
+</ul>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'Python'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s.isupper()
+<span class="hljs-literal"><span class="hljs-literal"><span class="hljs-literal">False</span></span></span></code></pre>
+<ul>
+<li><strong>istitle()</strong> - Начинаются ли слова в строке с заглавной буквы</li>
+</ul>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'Python'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s.istitle()
+<span class="hljs-literal"><span class="hljs-literal"><span class="hljs-literal">True</span></span></span></code></pre>
+<ul>
+<li><strong>upper()</strong> - Преобразование строки к верхнему регистру</li>
+</ul>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'Python'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s.upper()
+<span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'PYTHON'</span></span></span></code></pre>
+<ul>
+<li><strong>lower()</strong> - Преобразование строки к нижнему регистру</li>
+</ul>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'Python'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s.lower()
+<span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'python'</span></span></span></code></pre>
+<ul>
+<li><strong>startswith(str)</strong> - Начинается ли строка <strong>S</strong> с шаблона <strong>str</strong></li>
+</ul>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'Python'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s.startswith(<span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'P'</span></span></span>)
+<span class="hljs-literal"><span class="hljs-literal"><span class="hljs-literal">True</span></span></span></code></pre>
+<ul>
+<li><strong>endswith(str)</strong> - Заканчивается ли строка <strong>S</strong> шаблоном<strong> str</strong></li>
+</ul>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'Python'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s.endswith(<span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'a'</span></span></span>)
+<span class="hljs-literal"><span class="hljs-literal"><span class="hljs-literal">False</span></span></span></code></pre>
+<ul>
+<li><strong>join(список)</strong> - Сборка строки из списка с разделителем <strong>S</strong></li>
+</ul>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s = <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'Python'</span></span></span>
+<span class="hljs-meta"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span></span>s.join([<span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'a'</span></span></span>,<span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'b'</span></span></span>,<span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'c'</span></span></span>])
+<span class="hljs-string"><span class="hljs-string"><span class="hljs-string">'aPythonbPythonc'</span></span></span></code></pre>
+<p>&nbsp;</p></div></div></div></div></div></div></div>
