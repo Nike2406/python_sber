@@ -1,0 +1,50 @@
+<div><div id="activity-167415" data-type="activity_article" class="program-full__block inprogramm__activity inprogramm__activity_article"><div id="activity-container-167415" data-id="167415" class="program-full__block-content"><!----> <div class="program-full__block-main"><div class=""><div class="inprogramm__activity-content"><!----> <!----> <!----> <!----> <div class="activity activity-article"><div class="programs-article__img-wrap"><img src="https://cs.sberbank-school.ru/inline?access_token=eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzEwMzQyODksImlhdCI6MTYzMDk0Nzg4OSwiZmlsZV91dWlkIjoiNTUwNDRiZTYtNDczMi0xMWVhLTk5YjAtMDA1MDU2MDExYjY4In0.fIVgDdnB6MIibx9Hr1uQFnpHU03RBqRxrYSzLjlME-w" title="Основы Python" alt="Основы Python"></div> <p class="programs-article__text text-default-content" style="display: none;"></p></div> <!----></div> <!----></div> <!----> </div></div></div><div id="activity-167416" data-type="activity_article" class="program-full__block inprogramm__activity inprogramm__activity_article"><div id="activity-container-167416" data-id="167416" class="program-full__block-content"><!----> <div class="program-full__block-main"><div class="inprogramm__activity-inner"><div class="inprogramm__activity-content"><!----> <h3 class="hyphenate heading">
+	Предисловие
+</h3> <!----> <!----> <!----> <!----></div> <!----></div> <!----> <div id="block-270584" class="program-content-block cb_text"><div><!----> <div class="program-content-block__text text-default-content"><p>Исключения - это объекты, которые выводятся на экран как строка с текстом сообщения. Обычно они вызываются функциями и методами при возникновении ошибок или других важных событий при выполнении программы. В предыдущем разделе мы ловили ошибку с помощью <strong>assert</strong>. Данная функция вызывала исключение:</p>
+<pre class="language-python"><code class="hljs">Traceback (most recent call last):
+File <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">"solve.py"</span></span></span>, line <span class="hljs-number"><span class="hljs-number"><span class="hljs-number">11</span></span></span>, <span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword">in</span></span></span> &lt;module&gt;
+print(solve(<span class="hljs-number"><span class="hljs-number"><span class="hljs-number">123</span></span></span>))
+File <span class="hljs-string"><span class="hljs-string"><span class="hljs-string">"solve.py"</span></span></span>, line <span class="hljs-number"><span class="hljs-number"><span class="hljs-number">3</span></span></span>, <span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword">in</span></span></span> solve
+<span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword">assert</span></span></span> type(s) == list
+AssertionError</code></pre>
+<p>Существует множество видов исключений, вот только некоторые из них:</p>
+<ul>
+<li><strong>BaseException</strong> - базовое исключение, порождающее все остальные</li>
+<li><strong>SystemExit</strong> - системное исключение, порождаемое функцией <strong>sys.exit</strong> при выходе из программы</li>
+<li><strong>KeyboardInterrupt</strong> - системное исключение, порождаемое пользовательским выходом из программы с помощью сочетания клавиш&nbsp;</li>
+<li><strong>ArithmeticError</strong> - арифметическая ошибка</li>
+<li><strong>AssertionError</strong> - выражение <strong>assert</strong> ложно</li>
+<li><strong>ImportError</strong> - ошибка импорта модуля или его атрибута</li>
+<li><strong>IndexError</strong> - индекс не входит в диапазон элементов</li>
+<li><strong>NameError</strong> - не найдено переменных с таким именем</li>
+<li><strong>SyntaxError </strong>- ошибка синтаксиса</li>
+<li><strong>TypeError</strong> - операция к объекту несоответствующего типа</li>
+<li>и т.д.</li>
+</ul>
+<p>Исключения позволяют понять какого рода ошибки возникают при выполнении программ. Иногда необходимо отловить ошибку конкретного вида или пропустить ее, не обращая внимания. Для этого существуют обработчики исключений.</p></div></div></div></div></div></div><div id="activity-167417" data-type="activity_article" class="program-full__block inprogramm__activity inprogramm__activity_article"><div id="activity-container-167417" data-id="167417" class="program-full__block-content"><!----> <div class="program-full__block-main"><div class="inprogramm__activity-inner"><div class="inprogramm__activity-content"><!----> <h3 class="hyphenate heading">
+	Конструкция try...except
+</h3> <!----> <!----> <!----> <!----></div> <!----></div> <!----> <div id="block-270585" class="program-content-block cb_text"><div><!----> <div class="program-content-block__text text-default-content"><p>Конструкция try ... except позволяет перехватывать исключения, полный синтаксис выглядит следующим образом:</p>
+<pre class="language-python"><code class="hljs"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword">try</span></span></span>:
+try_suite
+<span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword">except</span></span></span> exception_group1 <span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword">as</span></span></span> variable1:
+except_suite1
+...
+<span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword">except</span></span></span> exception_groupN <span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword">as</span></span></span> variableN:
+except_suiteN
+<span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword">else</span></span></span>:
+else_suite
+<span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword">finally</span></span></span>:
+finally_suite</code></pre>
+<p>Минимально необходимая конструкция должна состоять из операторов&nbsp; <strong>try</strong> и <strong>except</strong>. Все остальные операторы являются необязательными.</p>
+<p>После оператора <strong>try</strong> записывается вложенная инструкция того, что должна выполнить программа. В случае успешного выполнения, выполнится инструкция после оператора <strong>else</strong>, если такой есть в программе. Если присутствует оператор <strong>finally</strong>, тогда вложенная в него инструкция выполняется всегда и в последнюю очередь. Если во время выполнения инструкции <strong>try_suite</strong> возникает исключение, то оно проверяется на соответствие операторами <strong>except</strong>. <strong>Exception_group</strong> может быть как единственным видом исключений, так и кортежем нескольких. Приставка <strong>as variable1</strong> является необязательной и служит для записи исключения в переменную <strong>variable1</strong>, чтобы затем к нему можно было обратиться в инструкции <strong>except_suite1</strong>. Инструкция <strong>except_suite1</strong> будет выполняться, когда при выполнении <strong>try_suite</strong> возникнет исключение, соответствующее <strong>exception_group1</strong>.</p>
+<p>При работе с исключениями необходимо помнить, что существует определенная иерархия в структуре исключений:&nbsp;</p></div></div></div><div id="block-270586" class="program-content-block cb_image"><div><!----> <div class="img-block loaded"><div class="img-block__wrapper"><div class="img-block__image-wrapper"><div alt="Снимок экрана 2020-02-04 в 13.35.13.png" class="img-block__lightbox"><a href="https://cs.sberbank-school.ru/image/full/full/resize/15681190-473a-11ea-b7d8-005056011b68" target="_blank" rel="noopener noreferrer" class="lightbox__thumbnail"><img src="https://cs.sberbank-school.ru/image/845/auto/fit/15681190-473a-11ea-b7d8-005056011b68" alt=""></a> <!----></div></div> <div class="img-block__expand-icon-wrapper"><svg width="52" height="52" viewBox="0 0 52 52" fill="none" class="img-block__expand-icon"><rect width="52" height="52" rx="10" fill="white"></rect> <path d="M36 16H31M36 16V21M36 16L33 19L30 22M16 36L22 30M16 36H21M16 36V31M36 36L30 30M36 36V31M36 36H31M16 16L22 22M16 16V21M16 16H21" stroke="black" stroke-width="2" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path></svg></div></div> <p class="img-block__description">
+Фрагмент структуры исключений
+</p></div></div></div><div id="block-270587" class="program-content-block cb_text"><div><!----> <div class="program-content-block__text text-default-content"><p>При отлове конкретных ошибок необходимо указывать их вид в первую очередь, т.е.:</p>
+<pre class="language-python"><code class="hljs"><span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword">try</span></span></span>:
+try_suite
+<span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword">except</span></span></span> IndexError:
+except_suite1
+<span class="hljs-keyword"><span class="hljs-keyword"><span class="hljs-keyword">except</span></span></span> Exception:
+except_suite2</code></pre>
+<p>В данном примере нам необходимо отловить ошибку индекса и выполнить соответствующее действие, а при возникновении любой другой - иное действие. В таком случае, исходя из структуры исключений, мы должны прописать конкретный вид исключения выше, чем более общий. Потому, что при возникновении <strong>IndexError</strong>, инструкция <strong>except_suite2</strong> будет также исполнена, т.к. <strong>IndexError</strong> является частью вида <strong>Exception</strong>. И, если, нам необходимо, чтобы <strong>except_suite1 </strong>выполнился раньше <strong>except_suite2</strong>, то мы указываем более частный вид исключения.&nbsp;</p>
+<p>Исключения могут быть полезными, однако есть и несколько недостатков применения исключений. Например, они используются, когда природа ошибки заранее известна, а это частный случай. Гораздо важнее, если бы программа могла сигнализировать о заранее неизвестной ошибке. Помимо этого, бывает невозможно определить какая строка кода будет выполняться после перехвата исключения. В любом случае, перехват исключений не является необходимым инструментом при написании кода, каждый может применять его на свое усмотрение.</p></div></div></div></div></div></div></div>
