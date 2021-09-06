@@ -1,0 +1,36 @@
+<div><div id="activity-167418" data-type="activity_article" class="program-full__block inprogramm__activity inprogramm__activity_article"><div id="activity-container-167418" data-id="167418" class="program-full__block-content"><!----> <div class="program-full__block-main"><div class=""><div class="inprogramm__activity-content"><!----> <!----> <!----> <!----> <div class="activity activity-article"><div class="programs-article__img-wrap"><img src="https://cs.sberbank-school.ru/inline?access_token=eyJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2MzEwMzQ4MTcsImlhdCI6MTYzMDk0ODQxNywiZmlsZV91dWlkIjoiZmFmNjZmODgtNDc0Mi0xMWVhLTkxZDEtMDA1MDU2MDExYjY4In0.JhTa-2qbOcuSQaeiQWWEI4POGHY0Q2oCtm9ZLdaxHBQ" title="Основы Python" alt="Основы Python"></div> <p class="programs-article__text text-default-content" style="display: none;"></p></div> <!----></div> <!----></div> <!----> </div></div></div><div id="activity-167419" data-type="activity_article" class="program-full__block inprogramm__activity inprogramm__activity_article"><div id="activity-container-167419" data-id="167419" class="program-full__block-content"><!----> <div class="program-full__block-main"><div class="inprogramm__activity-inner"><div class="inprogramm__activity-content"><!----> <h3 class="hyphenate heading">
+	Описание
+</h3> <!----> <!----> <!----> <!----></div> <!----></div> <!----> <div id="block-270588" class="program-content-block cb_text"><div><!----> <div class="program-content-block__text text-default-content"><p><strong>Python</strong> позволяет работать с файлами. В качестве примера будем работать с текстовым файлом. <br>Прежде чем начать работать с файлом необходимо его открыть, для этого есть метод&nbsp;<strong>open()</strong>:</p>
+<pre class="language-python"><code class="hljs">f = open(<span class="hljs-string"><span class="hljs-string">'test.txt'</span></span>, <span class="hljs-string"><span class="hljs-string">'r'</span></span>)</code></pre>
+<p>Мы присваиваем переменной <strong>f </strong>результат выполнения команды открытия файла, параметры этой команды - адрес файла, путь до места где он расположен на компьютере с названием файла(<strong>test</strong>) и его расширением(<strong>.txt</strong>), говорящим что он текстовый. Второй параметр '<strong>r</strong>' означает, что файл открыт для чтения, то есть мы не сможем вносить изменения в этот файл до тех пор, пока он открыт только для чтения.</p>
+<p>У метода<strong> open() </strong>существует много аргументов:</p>
+<ul>
+<li>'<strong>r</strong>' - открытие на чтение(значение по умолчанию)</li>
+<li>'<strong>w</strong>' - открытие на запись, содержимое файла удаляется и перезаписывается заново, если файла не существует, создается новый</li>
+<li>'<strong>x</strong>' - открытие на запись, только если файла не существует</li>
+<li>'<strong>a</strong>' - открытие на дозапись, информация добавляется в конец файла</li>
+<li>'<strong>b</strong>' - открытие файла в двоичном виде</li>
+<li>'<strong>t</strong>' - открытие в текстовом режиме(значение по умолчанию)</li>
+<li>'<strong>+</strong>' - открытие на чтение и запись</li>
+</ul>
+<p>Возможно сочетание режимов, например '<strong>rb</strong>', чтение в бинарном виде, по умолчанию установлен '<strong>rt</strong>'.</p>
+<p>После открытия файла можно прочитать из него информацию, благодаря методу <strong>read()</strong>:</p>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span>f = open(<span class="hljs-string"><span class="hljs-string">'test.txt'</span></span>)
+<span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span>f.read()
+<span class="hljs-string"><span class="hljs-string">'Python is\nAwesome!.\n\n'</span></span></code></pre>
+<p>Также можно прочитать и вывести файл построчно:</p>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span>f = open(<span class="hljs-string"><span class="hljs-string">'test.txt'</span></span>)
+<span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span><span class="hljs-keyword"><span class="hljs-keyword">for</span></span> line <span class="hljs-keyword"><span class="hljs-keyword">in</span></span> f:
+print(line)
+Python <span class="hljs-keyword"><span class="hljs-keyword">is</span></span>
+
+Awesome!</code></pre>
+<p>Записать информацию в файл можно открыв файл на запись:</p>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span>f = open(<span class="hljs-string"><span class="hljs-string">'test.txt'</span></span>, <span class="hljs-string"><span class="hljs-string">'w'</span></span>)
+<span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span><span class="hljs-keyword"><span class="hljs-keyword">for</span></span> i <span class="hljs-keyword"><span class="hljs-keyword">in</span></span> range(<span class="hljs-number"><span class="hljs-number">1</span></span>, <span class="hljs-number"><span class="hljs-number">4</span></span>):
+f.write(i + <span class="hljs-string"><span class="hljs-string">'\n'</span></span>)
+<span class="hljs-number"><span class="hljs-number">1</span></span>
+<span class="hljs-number"><span class="hljs-number">2</span></span>
+<span class="hljs-number"><span class="hljs-number">3</span></span></code></pre>
+<p>По окончании работы с файлом его необходимо закрыть, используя метод <strong>close()</strong>:</p>
+<pre class="language-python"><code class="hljs"><span class="hljs-meta"><span class="hljs-meta">&gt;&gt;&gt; </span></span>f.close()</code></pre></div></div></div></div></div></div></div>
